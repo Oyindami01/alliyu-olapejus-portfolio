@@ -54,54 +54,79 @@ const year = new Date().getFullYear();
 const footerText = document.querySelector("footer p");
 
 
-
 // =========================
 // EMAILJS CONTACT FORM
 // =========================
 
-
-(function(){
+(function () {
 
     emailjs.init("Kt0Gy7UCKVsPpp-It");
 
 })();
 
+const contactForm = document.getElementById("contact-form");
 
+if (contactForm) {
 
-const contactForm = document.getElementById("contactForm");
+    contactForm.addEventListener("submit", function (event) {
 
+        event.preventDefault();
 
-if(contactForm){
+        const formStatus = document.getElementById("form-status");
 
-contactForm.addEventListener("submit", function(event){
+        // Clear previous status
+        if (formStatus) {
+            formStatus.textContent = "";
+            formStatus.classList.remove("success", "error");
+        }
 
-    event.preventDefault();
+        emailjs.sendForm(
+            "service_sn3e1co",
+            "template_xwpz9us",
+            this
+        )
 
+        .then(function () {
 
+    if (formStatus) {
 
-    emailjs.sendForm(
-        "service_sn3e1co",
-        "template_xwpz9us",
-        this
-    )
+        formStatus.textContent =
+            "Message sent successfully! Thank you for reaching out.";
 
-    .then(function(){
+        formStatus.classList.remove("error");
+        formStatus.classList.add("success");
 
-        alert("Message sent successfully! Thank you for reaching out.");
+    }
 
-        contactForm.reset();
+    contactForm.reset();
 
-    })
+    // Clear success message after 5 seconds
+    setTimeout(function () {
 
-    .catch(function(error){
+        if (formStatus) {
+            formStatus.textContent = "";
+            formStatus.classList.remove("success");
+        }
 
-        alert("Message failed. Please try again.");
+    }, 5000);
 
-        console.log(error);
+})
+
+        .catch(function (error) {
+
+            if (formStatus) {
+
+                formStatus.textContent =
+                    "Message failed. Please try again.";
+
+                formStatus.classList.add("error");
+
+            }
+
+            console.log(error);
+
+        });
 
     });
-
-
-});
 
 }
