@@ -1,0 +1,150 @@
+/* =========================
+   FADE IN ANIMATIONS
+========================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+
+.hero-text {
+
+    animation: fadeIn 1s ease forwards;
+
+}
+
+
+
+.hero-image {
+
+    animation: fadeIn 1.2s ease forwards;
+
+}
+
+
+
+
+
+/* =========================
+   FLOATING PROFILE IMAGE
+========================= */
+
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+.hero-image img {
+
+    animation: float 4s ease-in-out infinite;
+
+}
+
+
+
+
+
+
+/* =========================
+   CARD HOVER EFFECT
+========================= */
+
+
+.skill-card,
+.project-card,
+.certificate-card {
+
+    transition: all .3s ease;
+
+}
+
+
+.skill-card:hover,
+.project-card:hover,
+.certificate-card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+
+
+
+
+
+
+/* =========================
+   BUTTON ANIMATION
+========================= */
+
+
+.btn {
+
+    position: relative;
+
+    overflow:hidden;
+
+}
+
+
+.btn:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+
+
+
+
+/* =========================
+   TEXT ANIMATION
+========================= */
+
+
+.hero-text h1 {
+
+    animation: fadeIn 1s ease;
+
+}
+
+
+.hero-text h2 {
+
+    animation: fadeIn 1.3s ease;
+
+}
+
+
+.hero-text p {
+
+    animation: fadeIn 1.5s ease;
+
+}

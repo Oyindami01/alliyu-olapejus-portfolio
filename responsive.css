@@ -1,0 +1,250 @@
+/* =========================
+   TABLET RESPONSIVENESS
+========================= */
+
+@media (max-width: 1024px) {
+
+
+    section {
+        padding: 70px 5%;
+    }
+
+
+    .hero {
+
+        gap: 30px;
+
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 2.7rem;
+
+    }
+
+
+    .skill-container,
+    .project-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+}
+
+
+
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 768px) {
+
+
+    /* Navbar */
+
+    .navbar {
+
+        padding: 20px 5%;
+
+    }
+
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+
+    .menu-btn {
+
+        display: block;
+
+    }
+
+
+
+
+
+    /* Hero */
+
+
+    .hero {
+
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        min-height: auto;
+
+        padding-top: 50px;
+
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 2.2rem;
+
+    }
+
+
+    .hero-text h2 {
+
+        font-size: 1.1rem;
+
+    }
+
+
+    .hero-text p {
+
+        font-size: 1rem;
+
+    }
+
+
+    .hero-image img {
+
+        width: 260px;
+
+        height: 260px;
+
+    }
+
+
+
+
+    /* Buttons */
+
+
+    .hero-buttons {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 15px;
+
+    }
+
+
+    .secondary {
+
+        margin-left: 0;
+
+    }
+
+
+
+
+
+
+
+    /* Cards */
+
+
+    .skill-container,
+    .project-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .skill-card,
+    .project-card {
+
+        padding: 25px;
+
+    }
+
+
+
+
+    /* Headings */
+
+
+    section h2 {
+
+        font-size: 2rem;
+
+    }
+
+
+
+
+}
+
+
+
+
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 480px) {
+
+
+    .logo {
+
+        font-size: 22px;
+
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 1.8rem;
+
+    }
+
+
+    .btn {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+
+    .hero-image img {
+
+        width: 220px;
+
+        height: 220px;
+
+    }
+
+
+}
+
+/* =====================================================
+   WEB PROJECTS — MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .web-project-image {
+        height: 260px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .web-project-image {
+        height: 230px;
+    }
+
+}
